@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../js/ie-emulation-modes-warning.js"></script>
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/highcharts.js"></script>
+    <script type="text/javascript">
+
+     var chart;
+        $(document).ready(function () {
+            //曲线图初始化
+            chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container1',
+                    type: 'line',
+                    marginRight: 220,
+                    marginBottom: 25
+                },
+                title: {
+                    text: '数据曲线图表',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: '漏洞名称',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['99年', '00年', '01年', '02年', '03年', '04年',
+        '05年', '06年', '07年', '08年', '09年', '10年', '11年', '12年', '13年', '14年', '15年', '16年']
+                },
+                yAxis: {
+                    title: {
+                        text: '数据'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 2,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    formatter: function () {
+                        return '<b>' + this.series.name + '</b><br/><br/>' +
+          this.x + ': ' + this.y + '单位';
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'top',
+                    x: -20,
+                    y: 200,
+                    borderWidth: 0
+                },
+                series: [{
+                    name: '用户1',
+                    data: [22, 22, 95, 245, 282, 225, 252, 265, 222, 282, 229, 96,100,200,300,250,223,150]
+                }, {
+                    name: '用户2',
+                    data: [02, 08, 57, 222, 270, 220, 248, 242, 202, 242, 86, 25]
+                }]
+            });
+             
+            
+    });
+  </script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">漏洞库</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Vulnerability</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                   <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">submit</button>
+              </form>
+          </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Nav item</a></li>
+            <li><a href="">Nav item again</a></li>
+            <li><a href="">One more nav</a></li>
+            <li><a href="">Another nav item</a></li>
+            <li><a href="">More navigation</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Nav item again</a></li>
+            <li><a href="">One more nav</a></li>
+            <li><a href="">Another nav item</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">漏洞名称</h1>
+
+          <!-- <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+          </div> -->
+          <!--  Chart
+    ================================================== -->
+    <div style="margin: 0 2em">
+        <div id="container1" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+    </div>
+
+          <h2 class="sub-header">详细信息</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>年份 </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="details-list-year-demo.html" >1999</a></td>
+                  <td><a href="details-list-year-demo.html" >2000</a></td>
+                  <td><a href="details-list-year-demo.html" >2001</a></td>
+                  <td><a href="details-list-year-demo.html" >2002</a></td>
+                  <td><a href="details-list-year-demo.html" >2003</a></td>
+                  <td><a href="details-list-year-demo.html" >2004</a></td>
+                  <td><a href="details-list-year-demo.html" >2005</a></td>
+                  <td><a href="details-list-year-demo.html" >2006</a></td>
+                  <td><a href="details-list-year-demo.html" >2007</a></td>
+                </tr>
+                <tr>
+                  <td><a href="details-list-year-demo.html" >2008</a></td>
+                  <td><a href="details-list-year-demo.html" >2009</a></td>
+                  <td><a href="details-list-year-demo.html" >2010</a></td>
+                  <td><a href="details-list-year-demo.html" >2011</a></td>
+                  <td><a href="details-list-year-demo.html" >2012</a></td>
+                  <td><a href="details-list-year-demo.html" >2013</a></td>
+                  <td><a href="details-list-year-demo.html" >2014</a></td>
+                  <td><a href="details-list-year-demo.html" >2015</a></td>
+                  <td><a href="details-list-year-demo.html" >2016</a></td>
+                </tr>
+               
+          
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
