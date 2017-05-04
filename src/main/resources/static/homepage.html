@@ -63,15 +63,22 @@
                 type: 'pie',
                 name: 'pie',
                 data: [
-        ['漏洞2', 55.0],
-        ['漏洞1', 26.8],
-        {
-            name: '漏洞4',
-            y: 12.8,
-            sliced: true,
-            selected: true
-        },
-        ['漏洞3', 7.5]
+       
+       
+        ['Directory Traversal', 3123],
+        ['Bypass Something', 4769],
+         ['Overflow', 12812],
+        ['Gain Information', 7592],
+        ['Gain Privilege', 4323],
+         ['Execute Code', 25462],
+        ['Sql Injection', 6515],
+        ['File Inclusion', 2150],
+         ['XSS', 10636],
+         ['CSRF', 1440],
+        ['Memory Corruption', 4132],
+        ['DoS', 18878],
+        
+        ['Http Response Splitting', 143]
       ]
             }]
         });
@@ -101,28 +108,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">漏洞库</a>
+              <a class="navbar-brand">漏洞库</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More<span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>
+                <li class="active"><a href="homepage.html">Home</a></li>
+                <li><a href="Document.html">Document</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="http://cve.mitre.org">CVE</a></li>
+                <li><a href="http://www.cvedetails.com">CVE Details</a></li>
+                <li><a href="http://cwe.mitre.org">CWE</a></li>
+                <li><a href="http://www.scap.org.cn">SCAP</a></li>
               </ul>
               <form class="navbar-form navbar-right" role="search">
                 <div class="form-group">
@@ -153,9 +149,9 @@
           <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              <h1>CVE Numbering Authorities</h1>
+              <p>CVE Numbering Authorities (CNAs) are organizations that are authorized to assign CVEs to vulnerabilities affecting products within their distinct, agreed-upon scope, for inclusion in first-time public announcements of new vulnerabilities.</p>
+              <p><a class="btn btn-lg btn-primary" href="http://cve.mitre.org/cve/cna.html" role="button">Learn more</a></p>
             </div>
           </div>
         </div>
@@ -163,9 +159,9 @@
           <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              <h1>CVE-2015-8234</h1>
+              <p>The image signature algorithm in OpenStack Glance 11.0.0 allows remote attackers to bypass the signature verification process via a crafted image, which triggers an MD5 collision.</p>
+              <p><a class="btn btn-lg btn-primary" href="http://cve.scap.org.cn/CVE-2015-8234.html" role="button">Learn more</a></p>
             </div>
           </div>
         </div>
@@ -173,9 +169,9 @@
           <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              <h1>APPLICATION SECURITY KEEPS YOU IN BUSINESS.</h1>
+              <p>Every aspect of your business relies on software. Yet adoption of secure software development practices is often lagging, leaving data vulnerable. </p>
+              <p><a class="btn btn-lg btn-primary" href="http://www.aspectsecurity.com" role="button">Learn more</a></p>
             </div>
           </div>
         </div>
@@ -198,290 +194,349 @@
         <div id="container3" style="min-width: 400px; height: 400px; margin: 20 auto"></div>
     </div>
         
-        <h2 class="sub-header" style="margin-left:30px">漏洞list</h2>
+        <h2 class="sub-header" style="margin-left:30px">list</h2>
           <div class="table-responsive">
-            <table class="table table-striped" style="margin-left:30px;margin-right:20px;" align="center">
+            <table class="table table-striped" style="margin-left:40px;margin-right:20px;" align="center">
               <thead>
                 <tr>
                   <th>Year </th>
-                  <th><a href="list-demo.html" >DosCodeExecution</a></th>
-                  <th><a href="list-demo.html" >OverflowMemory</a></th>
-                  <th><a href="list-demo.html" >SqlInjection</a></th>
-                  <th><a href="list-demo.html" >XSS</a></th>
-                  <th><a href="list-demo.html" >DirectoryTraversal</a></th>
-                  <th><a href="list-demo.html" >HttpResponseSplitting</a></th>
-                  <th><a href="list-demo.html" >Bypasssomething</a></th>
-                  <th><a href="list-demo.html" >GainInformation</a></th>
-                  <th><a href="list-demo.html" >GainPrivileges</a></th>
-                  <th><a href="list-demo.html" >CSRF</a></th>
-                  <th><a href="list-demo.html" >FileInclusion</a></th>
+                  
+                  <th><a href="list-demo-CodeExecution.html" >CodeExecution</a></th>
+                  <th><a href="list-demo-Overflow.html" >Overflow</a></th>
+                  <th><a href="list-demo-Memory Corruption.html" >Memory Corruption</a></th>
+                  <th><a href="list-demo-SqlInjection.html" >SqlInjection</a></th>     
+                  <th><a href="list-demo-XSS.html" >XSS</a></th>
+                  <th><a href="list-demo-Directory Traversal.html" >DirectoryTraversal</a></th>
+                  <th><a href="list-demo-HRS.html" >Http Response Splitting</a></th>
+                  <th><a href="list-demo-BypassSomething.html" >BypassSomething</a></th>
+                  <th><a href="list-demo-GainInformation.html" >GainInformation</a></th>
+                  <th><a href="list-demo-GainPrivileges.html" >GainPrivileges</a></th>
+                  <th><a href="list-demo-CSRF.html" >CSRF</a></th>
+                  <th><a href="list-demo-FileInclusion.html" >FileInclusion</a></th>
+                  <th><a href="list-demo-DoS.html" >DoS</a></th>
+                  
+                  
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr align="center">
                   <td>1999</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>112</td>
+                  <td>172</td>
+                  <td></td>
+                  <td></td>
+                  <td>2</td>
+                  <td>7</td>
+                  <td></td>
+                  <td>25</td>
+                  <td>16</td>
+                  <td>103</td>
+                  <td></td>
+                  <td></td>
+                  <td>177</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2000</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>208</td>
+                  <td>206</td>
+                  <td></td>
+                  <td>2</td>
+                  <td>4</td>
+                  <td>20</td>
+                  <td></td>
+                  <td>48</td>
+                  <td>19</td>
+                  <td>139</td>
+                  <td></td>
+                  <td></td>
+                  <td>257</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2001</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>403</td>
+                  <td>297</td>
+                  <td></td>
+                  <td>7</td>
+                  <td>34</td>
+                  <td>123</td>
+                  <td></td>
+                  <td>83</td>
+                  <td>36</td>
+                  <td>220</td>
+                  <td></td>
+                  <td>2</td>
+                  <td>402</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2002</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>553</td>
+                  <td>435</td>
+                  <td>2</td>
+                  <td>41</td>
+                  <td>200</td>
+                  <td>103</td>
+                  <td></td>
+                  <td>127</td>
+                  <td>74</td>
+                  <td>199</td>
+                  <td>2</td>
+                  <td>14</td>
+                  <td>497</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2003</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>476</td>
+                  <td>370</td>
+                  <td>2</td>
+                  <td>49</td>
+                  <td>129</td>
+                  <td>60</td>
+                  <td>1</td>
+                  <td>61</td>
+                  <td>69</td>
+                  <td>144</td>
+                  <td></td>
+                  <td>16</td>
+                  <td>381</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2004</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>614</td>
+                  <td>410</td>
+                  <td>3</td>
+                  <td>148</td>
+                  <td>291</td>
+                  <td>110</td>
+                  <td>12</td>
+                  <td>145</td>
+                  <td>96</td>
+                  <td>134</td>
+                  <td>5</td>
+                  <td>38</td>
+                  <td>580</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2005</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>1626</td>
+                  <td>657</td>
+                  <td>21</td>
+                  <td>604</td>
+                  <td>786</td>
+                  <td>202</td>
+                  <td>15</td>
+                  <td>289</td>
+                  <td>261</td>
+                  <td>221</td>
+                  <td>11</td>
+                  <td>100</td>
+                  <td>838</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2006</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>2719</td>
+                  <td>662</td>
+                  <td>91</td>
+                  <td>967</td>
+                  <td>1302</td>
+                  <td>322</td>
+                  <td>8</td>
+                  <td>267</td>
+                  <td>267</td>
+                  <td>184</td>
+                  <td>18</td>
+                  <td>894</td>
+                  <td>893</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2007</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>2601</td>
+                  <td>953</td>
+                  <td>95</td>
+                  <td>706</td>
+                  <td>883</td>
+                  <td>339</td>
+                  <td>14</td>
+                  <td>267</td>
+                  <td>322</td>
+                  <td>242</td>
+                  <td>69</td>
+                  <td>700</td>
+                  <td>1100</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2008</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>2310</td>
+                  <td>699</td>
+                  <td>128</td>
+                  <td>1101</td>
+                  <td>807</td>
+                  <td>363</td>
+                  <td>7</td>
+                  <td>288</td>
+                  <td>270</td>
+                  <td>188</td>
+                  <td>83</td>
+                  <td>170</td>
+                  <td>894</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2009</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>2185</td>
+                  <td>700</td>
+                  <td>188</td>
+                  <td>963</td>
+                  <td>851</td>
+                  <td>322</td>
+                  <td>9</td>
+                  <td>337</td>
+                  <td>302</td>
+                  <td>223</td>
+                  <td>115</td>
+                  <td>138</td>
+                  <td>1035</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2010</td>
-                  <td>eget</td>
-                  <td>nulla</td>
-                  <td>Class</td>
-                  <td>aptent</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>1714</td>
+                  <td>678</td>
+                  <td>342</td>
+                  <td>520</td>
+                  <td>605</td>
+                  <td>275</td>
+                  <td>8</td>
+                  <td>234</td>
+                  <td>282</td>
+                  <td>237</td>
+                  <td>86</td>
+                  <td>73</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2011</td>
-                  <td>taciti</td>
-                  <td>sociosqu</td>
-                  <td>ad</td>
-                  <td>litora</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>1334</td>
+                  <td>770</td>
+                  <td>351</td>
+                  <td>294</td>
+                  <td>467</td>
+                  <td>108</td>
+                  <td>7</td>
+                  <td>197</td>
+                  <td>409</td>
+                  <td>206</td>
+                  <td>58</td>
+                  <td>17</td>
+                  <td>1221</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2012</td>
-                  <td>torquent</td>
-                  <td>per</td>
-                  <td>conubia</td>
-                  <td>nostra</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>1457</td>
+                  <td>842</td>
+                  <td>423</td>
+                  <td>242</td>
+                  <td>758</td>
+                  <td>122</td>
+                  <td>13</td>
+                  <td>343</td>
+                  <td>389</td>
+                  <td>250</td>
+                  <td>166</td>
+                  <td>14</td>
+                  <td>1425</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2013</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>1186</td>
+                  <td>859</td>
+                  <td>366</td>
+                  <td>156</td>
+                  <td>650</td>
+                  <td>110</td>
+                  <td>7</td>
+                  <td>352</td>
+                  <td>511</td>
+                  <td>274</td>
+                  <td>123</td>
+                  <td>1</td>
+                  <td>1454</td>
                 </tr>
-                <tr>
+                <tr align="center">
                   <td>2014</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>1573</td>
+                  <td>850</td>
+                  <td>420</td>
+                  <td>304</td>
+                  <td>1105</td>
+                  <td>204</td>
+                  <td>12</td>
+                  <td>457</td>
+                  <td>2104</td>
+                  <td>239</td>
+                  <td>264</td>
+                  <td>2</td>
+                  <td>1597</td>
                 </tr>
-                 <tr>
+                 <tr align="center">
                   <td>2015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>1820</td>
+                  <td>1078</td>
+                  <td>749</td>
+                  <td>213</td>
+                  <td>758</td>
+                  <td>146</td>
+                  <td>12</td>
+                  <td>577</td>
+                  <td>748</td>
+                  <td>367</td>
+                  <td>245</td>
+                  <td>5</td>
+                  <td>1792</td>
                 </tr>
-                 <tr>
+                 <tr align="center">
                   <td>2016</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>1494</td>
+                  <td>1326</td>
+                  <td>717</td>
+                  <td>94</td>
+                  <td>495</td>
+                  <td>98</td>
+                  <td>15</td>
+                  <td>444</td>
+                  <td>840</td>
+                  <td>601</td>
+                  <td>86</td>
+                  <td>7</td>
+                  <td>2029</td>
                 </tr>
-                 <tr>
+                <tr align="center">
+                  <td>2017</td>
+                  <td>1077</td>
+                  <td>848</td>
+                  <td>234</td>
+                  <td>104</td>
+                  <td>59</td>
+                  <td>89</td>
+                  <td>3</td>
+                  <td>228</td>
+                  <td>577</td>
+                  <td>152</td>
+                  <td>109</td>
+                  <td>4</td>
+                  <td>1204</td>
+                </tr>
+                 <tr align="center">
                   <td>Total</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
-                  <td>sit</td>
+                  <td>25462</td>
+                  <td>12812</td>
+                  <td>4132</td>
+                  <td>6515</td>
+                  <td>10636</td>
+                  <td>3123</td>
+                  <td>143</td>
+                  <td>4769</td>
+                  <td>7592</td>
+                  <td>4323</td>
+                  <td>1440</td>
+                  <td>2150</td>
+                  <td>18878</td>
                 </tr>
               </tbody>
             </table>
@@ -517,47 +572,7 @@
       <!--/div><!-- /.row -->
 
 
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
+      
 
 
       <!-- FOOTER -->
