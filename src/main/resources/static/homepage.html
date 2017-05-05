@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../js/ie-emulation-modes-warning.js"></script>
+
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/highcharts.js"></script>
+    <script type="text/javascript">
+        var chart;
+        $(document).ready(function () {
+            //饼状图初始化
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container3',
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            title: {
+                text: '数据饼状图表'
+            },
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.point.name + '</b>: ' + this.percentage.toFixed(2) + ' %';
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        color: '#000000',
+                        connectorColor: '#000000',
+                        formatter: function () {
+                            return '<b>' + this.point.name + '</b>: ' + this.percentage.toFixed(2) + ' %';
+                        }
+                    }
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'pie',
+                data: [
+       
+       
+        ['Directory Traversal', 3123],
+        ['Bypass Something', 4769],
+         ['Overflow', 12812],
+        ['Gain Information', 7592],
+        ['Gain Privilege', 4323],
+         ['Execute Code', 25462],
+        ['Sql Injection', 6515],
+        ['File Inclusion', 2150],
+         ['XSS', 10636],
+         ['CSRF', 1440],
+        ['Memory Corruption', 4132],
+        ['DoS', 18878],
+        
+        ['Http Response Splitting', 143]
+      ]
+            }]
+        });
+    });
+  </script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="../css/carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand">漏洞库</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="homepage.html">Home</a></li>
+                <li><a href="Document.html">Document</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="http://cve.mitre.org">CVE</a></li>
+                <li><a href="http://www.cvedetails.com">CVE Details</a></li>
+                <li><a href="http://cwe.mitre.org">CWE</a></li>
+                <li><a href="http://www.scap.org.cn">SCAP</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                   <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">submit</button>
+              </form>
+            </div>
+      
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>CVE Numbering Authorities</h1>
+              <p>CVE Numbering Authorities (CNAs) are organizations that are authorized to assign CVEs to vulnerabilities affecting products within their distinct, agreed-upon scope, for inclusion in first-time public announcements of new vulnerabilities.</p>
+              <p><a class="btn btn-lg btn-primary" href="http://cve.mitre.org/cve/cna.html" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>CVE-2015-8234</h1>
+              <p>The image signature algorithm in OpenStack Glance 11.0.0 allows remote attackers to bypass the signature verification process via a crafted image, which triggers an MD5 collision.</p>
+              <p><a class="btn btn-lg btn-primary" href="http://cve.scap.org.cn/CVE-2015-8234.html" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>APPLICATION SECURITY KEEPS YOU IN BUSINESS.</h1>
+              <p>Every aspect of your business relies on software. Yet adoption of secure software development practices is often lagging, leaving data vulnerable. </p>
+              <p><a class="btn btn-lg btn-primary" href="http://www.aspectsecurity.com" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Pie Chart
+    ================================================== -->
+    <div style="margin: 0 2em">
+        <div id="container3" style="min-width: 400px; height: 400px; margin: 20 auto"></div>
+    </div>
+        
+        <h2 class="sub-header" style="margin-left:30px">list</h2>
+          <div class="table-responsive">
+            <table class="table table-striped" style="margin-left:40px;margin-right:20px;" align="center">
+              <thead>
+                <tr>
+                  <th>Year </th>
+                  
+                  <th><a href="list-demo-CodeExecution.html" >CodeExecution</a></th>
+                  <th><a href="list-demo-Overflow.html" >Overflow</a></th>
+                  <th><a href="list-demo-Memory Corruption.html" >Memory Corruption</a></th>
+                  <th><a href="list-demo-SqlInjection.html" >SqlInjection</a></th>     
+                  <th><a href="list-demo-XSS.html" >XSS</a></th>
+                  <th><a href="list-demo-Directory Traversal.html" >DirectoryTraversal</a></th>
+                  <th><a href="list-demo-HRS.html" >Http Response Splitting</a></th>
+                  <th><a href="list-demo-BypassSomething.html" >BypassSomething</a></th>
+                  <th><a href="list-demo-GainInformation.html" >GainInformation</a></th>
+                  <th><a href="list-demo-GainPrivileges.html" >GainPrivileges</a></th>
+                  <th><a href="list-demo-CSRF.html" >CSRF</a></th>
+                  <th><a href="list-demo-FileInclusion.html" >FileInclusion</a></th>
+                  <th><a href="list-demo-DoS.html" >DoS</a></th>
+                  
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr align="center">
+                  <td>1999</td>
+                  <td>112</td>
+                  <td>172</td>
+                  <td></td>
+                  <td></td>
+                  <td>2</td>
+                  <td>7</td>
+                  <td></td>
+                  <td>25</td>
+                  <td>16</td>
+                  <td>103</td>
+                  <td></td>
+                  <td></td>
+                  <td>177</td>
+                </tr>
+                <tr align="center">
+                  <td>2000</td>
+                  <td>208</td>
+                  <td>206</td>
+                  <td></td>
+                  <td>2</td>
+                  <td>4</td>
+                  <td>20</td>
+                  <td></td>
+                  <td>48</td>
+                  <td>19</td>
+                  <td>139</td>
+                  <td></td>
+                  <td></td>
+                  <td>257</td>
+                </tr>
+                <tr align="center">
+                  <td>2001</td>
+                  <td>403</td>
+                  <td>297</td>
+                  <td></td>
+                  <td>7</td>
+                  <td>34</td>
+                  <td>123</td>
+                  <td></td>
+                  <td>83</td>
+                  <td>36</td>
+                  <td>220</td>
+                  <td></td>
+                  <td>2</td>
+                  <td>402</td>
+                </tr>
+                <tr align="center">
+                  <td>2002</td>
+                  <td>553</td>
+                  <td>435</td>
+                  <td>2</td>
+                  <td>41</td>
+                  <td>200</td>
+                  <td>103</td>
+                  <td></td>
+                  <td>127</td>
+                  <td>74</td>
+                  <td>199</td>
+                  <td>2</td>
+                  <td>14</td>
+                  <td>497</td>
+                </tr>
+                <tr align="center">
+                  <td>2003</td>
+                  <td>476</td>
+                  <td>370</td>
+                  <td>2</td>
+                  <td>49</td>
+                  <td>129</td>
+                  <td>60</td>
+                  <td>1</td>
+                  <td>61</td>
+                  <td>69</td>
+                  <td>144</td>
+                  <td></td>
+                  <td>16</td>
+                  <td>381</td>
+                </tr>
+                <tr align="center">
+                  <td>2004</td>
+                  <td>614</td>
+                  <td>410</td>
+                  <td>3</td>
+                  <td>148</td>
+                  <td>291</td>
+                  <td>110</td>
+                  <td>12</td>
+                  <td>145</td>
+                  <td>96</td>
+                  <td>134</td>
+                  <td>5</td>
+                  <td>38</td>
+                  <td>580</td>
+                </tr>
+                <tr align="center">
+                  <td>2005</td>
+                  <td>1626</td>
+                  <td>657</td>
+                  <td>21</td>
+                  <td>604</td>
+                  <td>786</td>
+                  <td>202</td>
+                  <td>15</td>
+                  <td>289</td>
+                  <td>261</td>
+                  <td>221</td>
+                  <td>11</td>
+                  <td>100</td>
+                  <td>838</td>
+                </tr>
+                <tr align="center">
+                  <td>2006</td>
+                  <td>2719</td>
+                  <td>662</td>
+                  <td>91</td>
+                  <td>967</td>
+                  <td>1302</td>
+                  <td>322</td>
+                  <td>8</td>
+                  <td>267</td>
+                  <td>267</td>
+                  <td>184</td>
+                  <td>18</td>
+                  <td>894</td>
+                  <td>893</td>
+                </tr>
+                <tr align="center">
+                  <td>2007</td>
+                  <td>2601</td>
+                  <td>953</td>
+                  <td>95</td>
+                  <td>706</td>
+                  <td>883</td>
+                  <td>339</td>
+                  <td>14</td>
+                  <td>267</td>
+                  <td>322</td>
+                  <td>242</td>
+                  <td>69</td>
+                  <td>700</td>
+                  <td>1100</td>
+                </tr>
+                <tr align="center">
+                  <td>2008</td>
+                  <td>2310</td>
+                  <td>699</td>
+                  <td>128</td>
+                  <td>1101</td>
+                  <td>807</td>
+                  <td>363</td>
+                  <td>7</td>
+                  <td>288</td>
+                  <td>270</td>
+                  <td>188</td>
+                  <td>83</td>
+                  <td>170</td>
+                  <td>894</td>
+                </tr>
+                <tr align="center">
+                  <td>2009</td>
+                  <td>2185</td>
+                  <td>700</td>
+                  <td>188</td>
+                  <td>963</td>
+                  <td>851</td>
+                  <td>322</td>
+                  <td>9</td>
+                  <td>337</td>
+                  <td>302</td>
+                  <td>223</td>
+                  <td>115</td>
+                  <td>138</td>
+                  <td>1035</td>
+                </tr>
+                <tr align="center">
+                  <td>2010</td>
+                  <td>1714</td>
+                  <td>678</td>
+                  <td>342</td>
+                  <td>520</td>
+                  <td>605</td>
+                  <td>275</td>
+                  <td>8</td>
+                  <td>234</td>
+                  <td>282</td>
+                  <td>237</td>
+                  <td>86</td>
+                  <td>73</td>
+                </tr>
+                <tr align="center">
+                  <td>2011</td>
+                  <td>1334</td>
+                  <td>770</td>
+                  <td>351</td>
+                  <td>294</td>
+                  <td>467</td>
+                  <td>108</td>
+                  <td>7</td>
+                  <td>197</td>
+                  <td>409</td>
+                  <td>206</td>
+                  <td>58</td>
+                  <td>17</td>
+                  <td>1221</td>
+                </tr>
+                <tr align="center">
+                  <td>2012</td>
+                  <td>1457</td>
+                  <td>842</td>
+                  <td>423</td>
+                  <td>242</td>
+                  <td>758</td>
+                  <td>122</td>
+                  <td>13</td>
+                  <td>343</td>
+                  <td>389</td>
+                  <td>250</td>
+                  <td>166</td>
+                  <td>14</td>
+                  <td>1425</td>
+                </tr>
+                <tr align="center">
+                  <td>2013</td>
+                  <td>1186</td>
+                  <td>859</td>
+                  <td>366</td>
+                  <td>156</td>
+                  <td>650</td>
+                  <td>110</td>
+                  <td>7</td>
+                  <td>352</td>
+                  <td>511</td>
+                  <td>274</td>
+                  <td>123</td>
+                  <td>1</td>
+                  <td>1454</td>
+                </tr>
+                <tr align="center">
+                  <td>2014</td>
+                  <td>1573</td>
+                  <td>850</td>
+                  <td>420</td>
+                  <td>304</td>
+                  <td>1105</td>
+                  <td>204</td>
+                  <td>12</td>
+                  <td>457</td>
+                  <td>2104</td>
+                  <td>239</td>
+                  <td>264</td>
+                  <td>2</td>
+                  <td>1597</td>
+                </tr>
+                 <tr align="center">
+                  <td>2015</td>
+                  <td>1820</td>
+                  <td>1078</td>
+                  <td>749</td>
+                  <td>213</td>
+                  <td>758</td>
+                  <td>146</td>
+                  <td>12</td>
+                  <td>577</td>
+                  <td>748</td>
+                  <td>367</td>
+                  <td>245</td>
+                  <td>5</td>
+                  <td>1792</td>
+                </tr>
+                 <tr align="center">
+                  <td>2016</td>
+                  <td>1494</td>
+                  <td>1326</td>
+                  <td>717</td>
+                  <td>94</td>
+                  <td>495</td>
+                  <td>98</td>
+                  <td>15</td>
+                  <td>444</td>
+                  <td>840</td>
+                  <td>601</td>
+                  <td>86</td>
+                  <td>7</td>
+                  <td>2029</td>
+                </tr>
+                <tr align="center">
+                  <td>2017</td>
+                  <td>1077</td>
+                  <td>848</td>
+                  <td>234</td>
+                  <td>104</td>
+                  <td>59</td>
+                  <td>89</td>
+                  <td>3</td>
+                  <td>228</td>
+                  <td>577</td>
+                  <td>152</td>
+                  <td>109</td>
+                  <td>4</td>
+                  <td>1204</td>
+                </tr>
+                 <tr align="center">
+                  <td>Total</td>
+                  <td>25462</td>
+                  <td>12812</td>
+                  <td>4132</td>
+                  <td>6515</td>
+                  <td>10636</td>
+                  <td>3123</td>
+                  <td>143</td>
+                  <td>4769</td>
+                  <td>7592</td>
+                  <td>4323</td>
+                  <td>1440</td>
+                  <td>2150</td>
+                  <td>18878</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <!--div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <!--div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <!--div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      <!--/div><!-- /.row -->
+
+
+      
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

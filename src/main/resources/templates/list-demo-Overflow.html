@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../js/ie-emulation-modes-warning.js"></script>
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/highcharts.js"></script>
+    <script type="text/javascript">
+
+     var chart;
+        $(document).ready(function () {
+            //曲线图初始化
+            chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container1',
+                    type: 'line',
+                    marginRight: 220,
+                    marginBottom: 25
+                },
+                title: {
+                    text: '年份变化曲线图',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'Overflow',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['99年', '00年', '01年', '02年', '03年', '04年',
+        '05年', '06年', '07年', '08年', '09年', '10年', '11年', '12年', '13年', '14年', '15年', '16年']
+                },
+                yAxis: {
+                    title: {
+                        text: '数据'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 2,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    formatter: function () {
+                        return '<b>' + this.series.name + '</b><br/><br/>' +
+          this.x + ': ' + this.y + '个';
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'top',
+                    x: -20,
+                    y: 200,
+                    borderWidth: 0
+                },
+                series: [{
+                    name: '漏洞数目',
+                    data: [172, 206, 297, 435, 370, 410, 657, 662, 953, 699, 700, 678, 770, 842, 859, 850, 1078,1326]
+                }]
+            });
+             
+            
+    });
+  </script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">漏洞库</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="homepage.html">Home</a></li>
+                <li><a href="Document.html">Document</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="http://cve.mitre.org">CVE</a></li>
+                <li><a href="http://www.cvedetails.com">CVE Details</a></li>
+                <li><a href="http://cwe.mitre.org">CWE</a></li>
+                <li><a href="http://www.scap.org.cn">SCAP</a></li>
+              
+              </ul>
+              <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                   <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">submit</button>
+              </form>
+          </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div style="padding-left:20px">
+          <h1 class="page-header">Overflow</h1>
+
+          <!-- <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+          </div> -->
+          <!--  Chart
+    ================================================== -->
+    <div style="margin: 0 2em">
+        <div id="container1" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+    </div>
+
+          <h2 class="sub-header">详细信息</h2>
+          <div class="table-responsive">
+            <p>
+            In computer security and programming, a buffer overflow, or buffer overrun, is an anomaly where a program, while writing data to a buffer, overruns the buffer's boundary and overwrites adjacent memory locations.Buffers are areas of memory set aside to hold data, often while moving it from one section of a program to another, or between programs. Buffer overflows can often be triggered by malformed inputs; if one assumes all inputs will be smaller than a certain size and the buffer is created to be that size, if an anomalous transaction produces more data it could cause it to write past the end of the buffer. If this overwrites adjacent data or executable code, this may result in erratic program behavior, including memory access errors, incorrect results, and crashes.
+            </p>
+            <p>
+            Exploiting the behavior of a buffer overflow is a well-known security exploit. On many systems, the memory layout of a program, or the system as a whole, is well defined. By sending in data designed to cause a buffer overflow, it is possible to write into areas known to hold executable code, and replace it with malicious code. Buffers are widespread in operating system (OS) code, so it is possible to make attacks that perform privilege escalation and gain unlimited access to the computer's resources. The famed Morris worm used this as one of its attack techniques.
+            </p>
+            <p>
+            Programming languages commonly associated with buffer overflows include C and C++, which provide no built-in protection against accessing or overwriting data in any part of memory and do not automatically check that data written to an array (the built-in buffer type) is within the boundaries of that array. Bounds checking can prevent buffer overflows, but requires additional code and processing time. Modern operating systems use a variety of techniques to combat malicious buffer overflows, notably by randomizing the layout of memory, or deliberately leaving space between buffers and looking for actions that write into those areas ("canaries").
+            </p>
+            <p>
+            In software, a stack overflow occurs if the call stack pointer exceeds the stack bound. The call stack may consist of a limited amount of address space, often determined at the start of the program. The size of the call stack depends on many factors, including the programming language, machine architecture, multi-threading, and amount of available memory. When a program attempts to use more space than is available on the call stack (that is, when it attempts to access memory beyond the call stack's bounds, which is essentially a buffer overflow), the stack is said to overflow, typically resulting in a program crash.
+            </p>
+
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>年份 </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="details-list-year-demo.html" >1999</a></td>
+                  <td><a href="details-list-year-demo.html" >2000</a></td>
+                  <td><a href="details-list-year-demo.html" >2001</a></td>
+                  <td><a href="details-list-year-demo.html" >2002</a></td>
+                  <td><a href="details-list-year-demo.html" >2003</a></td>
+                  <td><a href="details-list-year-demo.html" >2004</a></td>
+                  <td><a href="details-list-year-demo.html" >2005</a></td>
+                  <td><a href="details-list-year-demo.html" >2006</a></td>
+                  <td><a href="details-list-year-demo.html" >2007</a></td>
+                </tr>
+                <tr>
+                  <td><a href="details-list-year-demo.html" >2008</a></td>
+                  <td><a href="details-list-year-demo.html" >2009</a></td>
+                  <td><a href="details-list-year-demo.html" >2010</a></td>
+                  <td><a href="details-list-year-demo.html" >2011</a></td>
+                  <td><a href="details-list-year-demo.html" >2012</a></td>
+                  <td><a href="details-list-year-demo.html" >2013</a></td>
+                  <td><a href="details-list-year-demo.html" >2014</a></td>
+                  <td><a href="details-list-year-demo.html" >2015</a></td>
+                  <td><a href="details-list-year-demo.html" >2016</a></td>
+                </tr>
+               
+          
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
